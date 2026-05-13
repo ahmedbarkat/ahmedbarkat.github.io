@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ahmed Barakat — Backend Architect</title>
+<title>Ahmed Barakat Samra — Co-Founder & Principal Backend Engineer</title>
+<meta name="description" content="Co-Founder & Principal Backend Engineer with 14+ years designing scalable SaaS platforms in HealthTech & EdTech. Open to Senior, Architect, and Leadership roles.">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -21,6 +22,7 @@
     --text3: #4d5e56;
     --border: rgba(29,158,117,0.15);
     --border2: rgba(255,255,255,0.06);
+    --border3: rgba(255,255,255,0.1);
   }
 
   html { scroll-behavior: smooth; }
@@ -34,7 +36,6 @@
     overflow-x: hidden;
   }
 
-  /* NOISE OVERLAY */
   body::before {
     content: '';
     position: fixed;
@@ -54,7 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(11,15,14,0.85);
+    background: rgba(11,15,14,0.9);
     backdrop-filter: blur(20px);
     border-bottom: 0.5px solid var(--border);
   }
@@ -80,6 +81,18 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--green); }
+
+  .nav-cta {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    padding: 7px 16px;
+    border: 0.5px solid var(--green);
+    color: var(--green);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: var(--green); color: #fff; }
 
   /* HERO */
   .hero {
@@ -154,13 +167,22 @@
     font-size: clamp(3rem, 7vw, 5.5rem);
     line-height: 1.05;
     color: var(--text);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     animation: fadeUp 0.6s 0.1s ease both;
   }
 
   .hero h1 em {
     font-style: italic;
     color: var(--green);
+  }
+
+  .hero-title-line {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--text2);
+    letter-spacing: 0.08em;
+    margin-bottom: 1.25rem;
+    animation: fadeUp 0.6s 0.15s ease both;
   }
 
   .hero-sub {
@@ -195,10 +217,7 @@
     font-family: 'Outfit', sans-serif;
   }
 
-  .btn-primary {
-    background: var(--green);
-    color: #fff;
-  }
+  .btn-primary { background: var(--green); color: #fff; }
   .btn-primary:hover { background: var(--green-dim); transform: translateY(-1px); }
 
   .btn-outline {
@@ -215,6 +234,7 @@
     padding-top: 3rem;
     border-top: 0.5px solid var(--border2);
     animation: fadeUp 0.6s 0.4s ease both;
+    flex-wrap: wrap;
   }
 
   .hero-stat-num {
@@ -272,6 +292,57 @@
     margin-left: 1rem;
   }
 
+  /* ABOUT / SUMMARY */
+  .about-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .about-text {
+    font-size: 15px;
+    color: var(--text2);
+    line-height: 1.8;
+  }
+
+  .about-text p + p { margin-top: 1rem; }
+
+  .about-highlight {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .about-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border2);
+    border: 0.5px solid var(--border2);
+  }
+
+  .about-fact {
+    background: var(--bg2);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .fact-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--text3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .fact-value {
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 400;
+  }
+
   /* EXPERTISE */
   .expertise-grid {
     display: grid;
@@ -293,10 +364,11 @@
   .expertise-card:hover .exp-icon { color: var(--green); }
 
   .exp-icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--text3);
     margin-bottom: 1rem;
     transition: color 0.25s;
+    font-family: 'DM Mono', monospace;
   }
 
   .exp-card-title {
@@ -320,17 +392,14 @@
   }
 
   .timeline-item {
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
     position: relative;
     opacity: 0;
     transform: translateX(-10px);
     transition: opacity 0.5s, transform 0.5s;
   }
 
-  .timeline-item.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  .timeline-item.visible { opacity: 1; transform: translateX(0); }
 
   .timeline-dot {
     position: absolute;
@@ -347,7 +416,7 @@
     font-size: 11px;
     color: var(--green);
     letter-spacing: 0.08em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
   }
 
   .timeline-role {
@@ -361,6 +430,19 @@
     color: var(--text2);
     margin-top: 2px;
     margin-bottom: 1rem;
+  }
+
+  .timeline-badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    padding: 3px 10px;
+    border: 0.5px solid var(--border);
+    color: var(--green);
+    border-radius: 12px;
+    background: var(--green-soft);
+    margin-bottom: 1rem;
+    letter-spacing: 0.06em;
   }
 
   .timeline-points {
@@ -452,12 +534,76 @@
     letter-spacing: 0.05em;
   }
 
+  /* ACHIEVEMENTS */
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--border2);
+    border: 0.5px solid var(--border2);
+    margin-bottom: 2.5rem;
+  }
+
+  .achievement-card {
+    background: var(--bg2);
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .achievement-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.8rem;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .achievement-label {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.4;
+  }
+
+  .achievement-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .achievement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--bg2);
+    border: 0.5px solid var(--border2);
+    transition: border-color 0.2s;
+  }
+
+  .achievement-item:hover { border-color: var(--border); }
+
+  .achievement-arrow {
+    color: var(--green);
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .achievement-text {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.5;
+  }
+
   /* SKILLS */
   .skills-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
+
+  .skill-group { margin-bottom: 1.5rem; }
 
   .skill-group-title {
     font-family: 'DM Mono', monospace;
@@ -465,7 +611,9 @@
     color: var(--green);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid var(--border2);
   }
 
   .skill-list {
@@ -485,7 +633,48 @@
   }
 
   .skill-pill:hover { border-color: var(--green); color: var(--green); }
-  .skill-pill.highlight { border-color: var(--border); color: var(--text); }
+  .skill-pill.highlight { border-color: rgba(29,158,117,0.3); color: var(--text); }
+
+  /* CERTIFICATIONS */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .cert-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--border2);
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: border-color 0.2s;
+  }
+
+  .cert-card:hover { border-color: var(--border); }
+
+  .cert-icon {
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
+    color: var(--green);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .cert-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .cert-issuer {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 0.05em;
+  }
 
   /* CONTACT */
   .contact-block {
@@ -517,7 +706,7 @@
     font-size: 14px;
     color: var(--text2);
     margin-bottom: 2rem;
-    max-width: 400px;
+    max-width: 440px;
   }
 
   .contact-links {
@@ -541,6 +730,13 @@
 
   .contact-link:hover { border-color: var(--green); color: var(--green); }
 
+  .contact-link.primary {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+  }
+  .contact-link.primary:hover { background: var(--green-dim); }
+
   /* FOOTER */
   footer {
     text-align: center;
@@ -560,27 +756,86 @@
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  @media (max-width: 600px) {
+  /* DOWNLOAD BAR */
+  .download-bar {
+    background: var(--bg3);
+    border: 0.5px solid var(--border);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .download-bar-text {
+    font-size: 13px;
+    color: var(--text2);
+  }
+
+  .download-bar-text span {
+    color: var(--green);
+    font-weight: 500;
+  }
+
+  .download-btns {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .dl-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 7px 16px;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+  }
+
+  .dl-btn-primary {
+    background: var(--green);
+    color: #fff;
+  }
+  .dl-btn-primary:hover { background: var(--green-dim); }
+
+  .dl-btn-outline {
+    background: transparent;
+    border: 0.5px solid var(--border2);
+    color: var(--text2);
+  }
+  .dl-btn-outline:hover { border-color: var(--green); color: var(--green); }
+
+  @media (max-width: 700px) {
     nav { padding: 1rem 1.25rem; }
     .nav-links { display: none; }
     .hero { padding: 7rem 1.25rem 3rem; }
     .hero-stats { gap: 1.5rem; }
     section { padding: 4rem 1.25rem; }
+    .about-block { grid-template-columns: 1fr; }
     .skills-section { grid-template-columns: 1fr; }
+    .cert-grid { grid-template-columns: 1fr; }
     .contact-block { padding: 2rem 1.25rem; }
+    .download-bar { flex-direction: column; align-items: flex-start; }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">AB — Portfolio</div>
+  <div class="nav-logo">ABS — Portfolio</div>
   <ul class="nav-links">
+    <li><a href="#about">About</a></li>
     <li><a href="#expertise">Expertise</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <a href="mailto:ahmedbarakatsamra@gmail.com" class="nav-cta">Hire Me →</a>
 </nav>
 
 <!-- HERO -->
@@ -589,14 +844,16 @@
   <div class="hero-glow"></div>
   <div class="hero-inner">
     <div class="hero-tag">Available for Remote &amp; Gulf Opportunities</div>
-    <h1>Ahmed Barakat<br><em>Backend Architect.</em></h1>
+    <h1>Ahmed Barakat<br><em>Samra.</em></h1>
+    <div class="hero-title-line">CO-FOUNDER · PRINCIPAL BACKEND ENGINEER · SYSTEM ARCHITECT</div>
     <p class="hero-sub">
-      14+ years designing and scaling enterprise-grade systems in Healthcare and Education.
-      Specialized in Django, distributed systems, and high-performance SaaS platforms.
+      14+ years building enterprise-grade SaaS systems from the ground up — solo.
+      Co-founder of Inmaa &amp; Alnafis. Specialized in Django, distributed systems, and
+      high-performance platforms in HealthTech &amp; EdTech.
     </p>
     <div class="hero-ctas">
       <a href="#contact" class="btn btn-primary">Let's Talk →</a>
-      <a href="#projects" class="btn btn-outline">View Projects</a>
+      <a href="#experience" class="btn btn-outline">View Experience</a>
       <a href="https://www.linkedin.com/in/ahmed-barakat-samra" target="_blank" class="btn btn-outline">LinkedIn ↗</a>
     </div>
     <div class="hero-stats">
@@ -609,8 +866,12 @@
         <div class="hero-stat-label">Users Served</div>
       </div>
       <div>
-        <div class="hero-stat-num">8+</div>
-        <div class="hero-stat-label">Enterprise Systems</div>
+        <div class="hero-stat-num">2</div>
+        <div class="hero-stat-label">Co-Founded Startups</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">30+</div>
+        <div class="hero-stat-label">Client Deployments</div>
       </div>
       <div>
         <div class="hero-stat-num">&lt;1s</div>
@@ -619,6 +880,63 @@
     </div>
   </div>
 </div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header reveal">
+    <span class="section-num">00</span>
+    <h2 class="section-title">About</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-block reveal">
+    <div class="about-text">
+      <p>
+        I'm a <span class="about-highlight">Co-Founder and Principal Backend Engineer</span> with 14+ years of
+        experience designing and delivering mission-critical SaaS platforms across Healthcare and Education.
+      </p>
+      <p>
+        As the <span class="about-highlight">sole developer and technical lead</span> at Inmaa and Alnafis for
+        over 10 years, I wore every hat — architect, engineer, client liaison, and delivery lead. From writing
+        the first line of code to shipping production systems serving hundreds of thousands of users.
+      </p>
+      <p>
+        I specialize in <span class="about-highlight">Python/Django, distributed systems, multi-tenant
+        architecture,</span> and high-performance backend engineering — with deep domain expertise in
+        Laboratory Information Systems, Hospital IS, and Academic ERP.
+      </p>
+      <p style="margin-top: 1.5rem;">
+        Open to <span class="about-highlight">Senior/Principal Engineer, Backend Architect, and Technical
+        Leadership roles</span> — remote or Gulf-based.
+      </p>
+    </div>
+    <div class="about-facts">
+      <div class="about-fact">
+        <div class="fact-label">Location</div>
+        <div class="fact-value">Mansoura, Egypt</div>
+      </div>
+      <div class="about-fact">
+        <div class="fact-label">Co-Founded</div>
+        <div class="fact-value">Inmaa Solutions · Alnafis</div>
+      </div>
+      <div class="about-fact">
+        <div class="fact-label">Domains</div>
+        <div class="fact-value">HealthTech · EdTech</div>
+      </div>
+      <div class="about-fact">
+        <div class="fact-label">Core Stack</div>
+        <div class="fact-value">Python · Django · Redis · AWS</div>
+      </div>
+      <div class="about-fact">
+        <div class="fact-label">Languages</div>
+        <div class="fact-value">Arabic (Native) · English (Professional)</div>
+      </div>
+      <div class="about-fact">
+        <div class="fact-label">Contact</div>
+        <div class="fact-value">ahmedbarakatsamra@gmail.com</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- EXPERTISE -->
 <section id="expertise">
@@ -629,34 +947,34 @@
   </div>
   <div class="expertise-grid reveal">
     <div class="expertise-card">
-      <div class="exp-icon">⬡</div>
+      <div class="exp-icon">[BE]</div>
       <div class="exp-card-title">Backend Architecture</div>
-      <div class="exp-card-desc">Designing scalable Django systems with clean architecture, SOLID principles, and long-term maintainability in mind.</div>
+      <div class="exp-card-desc">Designing scalable Django systems with clean architecture, SOLID principles, HLD/LLD, and long-term maintainability.</div>
     </div>
     <div class="expertise-card">
-      <div class="exp-icon">⬡</div>
+      <div class="exp-icon">[DS]</div>
       <div class="exp-card-title">Distributed Systems</div>
-      <div class="exp-card-desc">Microservices design, async workflows with Celery & Redis, achieving sub-second response times at scale.</div>
+      <div class="exp-card-desc">Microservices design, event-driven architecture, async workflows with Celery &amp; Redis achieving sub-second response times at scale.</div>
     </div>
     <div class="expertise-card">
-      <div class="exp-icon">⬡</div>
+      <div class="exp-icon">[HIS]</div>
       <div class="exp-card-title">Healthcare Platforms</div>
-      <div class="exp-card-desc">Hospital Information Systems (HIS), Laboratory Information Systems (LIS), and Medical Eportfolio platforms.</div>
+      <div class="exp-card-desc">Deep expertise in Hospital IS (HIS), Laboratory IS (LIS), Clinic ERP, and Medical ePortfolio platforms in production.</div>
     </div>
     <div class="expertise-card">
-      <div class="exp-icon">⬡</div>
+      <div class="exp-icon">[MT]</div>
+      <div class="exp-card-title">Multi-Tenant SaaS</div>
+      <div class="exp-card-desc">Multi-tenancy engine with per-client database partitioning, strict data isolation, and single-codebase scalability.</div>
+    </div>
+    <div class="expertise-card">
+      <div class="exp-icon">[TL]</div>
       <div class="exp-card-title">Technical Leadership</div>
-      <div class="exp-card-desc">Leading engineering teams, code reviews, mentoring developers, and translating business needs into technical roadmaps.</div>
+      <div class="exp-card-desc">Co-founding, product roadmaps, client delivery, mentoring developers, and translating business needs into technical solutions.</div>
     </div>
     <div class="expertise-card">
-      <div class="exp-icon">⬡</div>
-      <div class="exp-card-title">SaaS & Data Platforms</div>
-      <div class="exp-card-desc">High-performance data-intensive platforms serving 300K+ users with real-time analytics and notifications.</div>
-    </div>
-    <div class="expertise-card">
-      <div class="exp-icon">⬡</div>
-      <div class="exp-card-title">Cloud & DevOps</div>
-      <div class="exp-card-desc">Cloud deployment, CI/CD pipelines, and infrastructure automation for enterprise-grade reliability.</div>
+      <div class="exp-icon">[OPS]</div>
+      <div class="exp-card-title">Cloud &amp; DevOps</div>
+      <div class="exp-card-desc">AWS (EC2, S3, RDS), Docker, Nginx, GitHub Actions CI/CD pipelines, and Linux-based infrastructure for enterprise reliability.</div>
     </div>
   </div>
 </section>
@@ -669,36 +987,107 @@
     <div class="section-line"></div>
   </div>
   <div class="timeline">
+
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-period">Dec 2012 — Present · 13+ years</div>
-      <div class="timeline-role">Senior Software Engineer / Backend Architect</div>
-      <div class="timeline-org">Inmaa · Full-time · Egypt (On-site)</div>
+      <div class="timeline-period">January 2021 — Present · 4+ years</div>
+      <div class="timeline-role">Co-Founder &amp; Principal Backend Engineer / Technical Lead</div>
+      <div class="timeline-org">Inmaa Solutions · Mansoura, Egypt</div>
+      <div class="timeline-badge">Co-Founder · Sole Developer · Architect</div>
       <ul class="timeline-points">
-        <li>Led backend architecture for enterprise healthcare and academic platforms serving 300,000+ combined users.</li>
-        <li>Architected Django-based systems with Redis caching and Celery async processing, achieving sub-second response times.</li>
-        <li>Designed and delivered HIS, LIS, Medical Student Eportfolio, and Academic & Postgraduate Management Systems.</li>
-        <li>Defined technical roadmaps and translated complex business requirements into scalable backend solutions.</li>
-        <li>Led code reviews, enforced SOLID principles, and mentored developers to improve team productivity.</li>
+        <li>Served as Co-Founder and sole developer, owning the full engineering lifecycle — architecture, development, client delivery, support, and product roadmap.</li>
+        <li>Architected and scaled a high-volume multi-tenant LIS &amp; ERP SaaS platform serving 20,000+ active users across mega-labs.</li>
+        <li>Engineered a dynamic Multi-Tenancy Engine using Django ORM and Middleware for per-client database partitioning (MySQL/MongoDB) with strict data isolation.</li>
+        <li>Designed a state-machine workflow automation system enforcing separation of duties (Reception → Sampling → Verification), reducing errors by ~60%.</li>
+        <li>Built a complex financial engine handling B2B contracts, insurance coverage, and dynamic discounting logic across multiple branches.</li>
+        <li>Implemented async processing with Celery + Redis, achieving sub-second response times for heavy financial calculations.</li>
+        <li>Developed a full-stack Hospital Information System (HIS) with real-time accounting and inventory management.</li>
+        <li>Led end-to-end development of a Medical ePortfolio &amp; Student Portal for Mansoura Faculty of Medicine (Vue.js + Django REST).</li>
       </ul>
     </div>
+
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-period">May 2010 — Dec 2011 · 1 yr 8 mos</div>
+      <div class="timeline-period">October 2016 — December 2020 · 4+ years</div>
+      <div class="timeline-role">Co-Founder &amp; Senior Full-Stack Engineer / System Architect</div>
+      <div class="timeline-org">Alnafis · Independent Consultant · Mansoura, Egypt</div>
+      <div class="timeline-badge">Co-Founder · Sole Developer · Client Lead</div>
+      <ul class="timeline-points">
+        <li>Co-founded Alnafis; sole developer, architect, client liaison, and delivery lead for the full duration.</li>
+        <li>Built and deployed a Clinic Management ERP (Reception, Patient History, Exams, Accounting) across 30+ client clinics.</li>
+        <li>Migrated legacy desktop systems to modern Python/Django web architectures with JWT auth and REST endpoints.</li>
+        <li>Acted as primary technical contact for all clients — support, feature development, and database administration.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-period">January 2012 — September 2016 · 4+ years</div>
+      <div class="timeline-role">Lead Software Architect (.NET) — Contract</div>
+      <div class="timeline-org">Higher Education Projects · Cairo &amp; Mansoura, Egypt</div>
+      <ul class="timeline-points">
+        <li>Evolved from core developer to sole System Architect on an enterprise Student Affairs ERP serving 30,000+ students at Cairo University, Ain Shams University, and private institutes.</li>
+        <li>Built a proprietary Result Engine for GPA/CGPA calculation, grade appeals, control sheets, and dynamic certificate generation.</li>
+        <li>Developed specialized modules for complex academic workflows including research-based grading for Nanotechnology postgraduates.</li>
+        <li>Implemented financial integration logic blocking student registration pending fee payment verification.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-period">December 2010 — December 2011</div>
       <div class="timeline-role">Software Developer</div>
-      <div class="timeline-org">Cairo IT · Egypt</div>
+      <div class="timeline-org">Cairo IT · Cairo, Egypt</div>
       <ul class="timeline-points">
-        <li>Built and maintained ASP.NET applications with client support and custom SharePoint projects.</li>
+        <li>Built and maintained ASP.NET applications; developed custom C# tools for XML validation.</li>
+        <li>Enhanced enterprise document workflows on SharePoint portals.</li>
       </ul>
     </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-period">May 2009 — Jul 2010 · 1 yr 3 mos</div>
-      <div class="timeline-role">E-Learning Developer</div>
-      <div class="timeline-org">Cairo IT · Egypt</div>
-      <ul class="timeline-points">
-        <li>Built Intel e-learning courses in 23+ languages using XML, Flash, ActionScript, and Photoshop.</li>
-      </ul>
+
+  </div>
+</section>
+
+<!-- KEY ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="section-header reveal">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Key Achievements</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="achievements-grid reveal">
+    <div class="achievement-card">
+      <div class="achievement-num">300K+</div>
+      <div class="achievement-label">Total users across HealthTech &amp; EdTech platforms</div>
+    </div>
+    <div class="achievement-card">
+      <div class="achievement-num">30+</div>
+      <div class="achievement-label">Client clinic deployments as sole engineer</div>
+    </div>
+    <div class="achievement-card">
+      <div class="achievement-num">~60%</div>
+      <div class="achievement-label">Reduction in lab operational errors via workflow automation</div>
+    </div>
+    <div class="achievement-card">
+      <div class="achievement-num">&lt;1s</div>
+      <div class="achievement-label">Response times on heavy financial calculations</div>
+    </div>
+  </div>
+  <div class="achievement-items reveal">
+    <div class="achievement-item">
+      <div class="achievement-arrow">→</div>
+      <div class="achievement-text">Scaled SaaS platforms to 300,000+ total users as a solo technical co-founder across two startups over 10+ years.</div>
+    </div>
+    <div class="achievement-item">
+      <div class="achievement-arrow">→</div>
+      <div class="achievement-text">Delivered end-to-end enterprise systems for Cairo University, Ain Shams University, Mansoura Faculty of Medicine, and 30+ clinics as the sole engineer and architect.</div>
+    </div>
+    <div class="achievement-item">
+      <div class="achievement-arrow">→</div>
+      <div class="achievement-text">Engineered a multi-tenant SaaS architecture supporting Mini and Mega lab models from a single codebase with strict per-client data isolation.</div>
+    </div>
+    <div class="achievement-item">
+      <div class="achievement-arrow">→</div>
+      <div class="achievement-text">Built and shipped a complex B2B financial engine covering insurance coverage, branch-level discounting, and contract management in production.</div>
     </div>
   </div>
 </section>
@@ -706,57 +1095,57 @@
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-header reveal">
-    <span class="section-num">03</span>
+    <span class="section-num">04</span>
     <h2 class="section-title">Key Projects</h2>
     <div class="section-line"></div>
   </div>
   <div class="projects-grid">
     <div class="proj-card reveal">
-      <div class="proj-num">01 / HIS</div>
+      <div class="proj-num">01 / LIS</div>
+      <div class="proj-title">Laboratory Information System</div>
+      <div class="proj-desc">Multi-tenant LIS &amp; ERP SaaS for mega-labs with state-machine workflows, B2B financial engine, and real-time branch reporting. 20,000+ active users.</div>
+      <div class="proj-stack">
+        <span class="stack-tag">Django</span><span class="stack-tag">Python</span><span class="stack-tag">MySQL</span><span class="stack-tag">MongoDB</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span>
+      </div>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-num">02 / HIS</div>
       <div class="proj-title">Hospital Information System</div>
-      <div class="proj-desc">Enterprise-grade HIS covering patient management, clinical workflows, medical records, billing, and reporting at scale.</div>
+      <div class="proj-desc">Full-stack HIS with real-time patient invoicing, inventory management, clinical workflows, medical records, and billing at enterprise scale.</div>
       <div class="proj-stack">
         <span class="stack-tag">Django</span><span class="stack-tag">Python</span><span class="stack-tag">MySQL</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span>
       </div>
     </div>
     <div class="proj-card reveal">
-      <div class="proj-num">02 / LIS</div>
-      <div class="proj-title">Laboratory Information System</div>
-      <div class="proj-desc">Full-featured LIS for lab test ordering, result processing, reporting, and integration with hospital workflows.</div>
-      <div class="proj-stack">
-        <span class="stack-tag">Django</span><span class="stack-tag">Python</span><span class="stack-tag">MySQL</span><span class="stack-tag">REST API</span>
-      </div>
-    </div>
-    <div class="proj-card reveal">
       <div class="proj-num">03 / EPORTFOLIO</div>
-      <div class="proj-title">Medical Student Eportfolio</div>
-      <div class="proj-desc">Platform for medical students to document clinical experiences, supervisor assessments, and competency tracking.</div>
+      <div class="proj-title">Medical Student ePortfolio</div>
+      <div class="proj-desc">Platform for Mansoura Faculty of Medicine students — clinical experience logs, supervisor assessments, and competency tracking via decoupled frontend/API.</div>
       <div class="proj-stack">
-        <span class="stack-tag">Django</span><span class="stack-tag">Vue.js</span><span class="stack-tag">MySQL</span><span class="stack-tag">Redis</span>
+        <span class="stack-tag">Django REST</span><span class="stack-tag">Vue.js</span><span class="stack-tag">MySQL</span><span class="stack-tag">Redis</span>
       </div>
     </div>
     <div class="proj-card reveal">
-      <div class="proj-num">04 / CLINIC</div>
-      <div class="proj-title">Clinic Management System</div>
-      <div class="proj-desc">Patient registration, appointments, medical records, prescriptions, and billing for scalable clinic operations.</div>
+      <div class="proj-num">04 / CLINIC ERP</div>
+      <div class="proj-title">Clinic Management ERP</div>
+      <div class="proj-desc">Patient registration, appointments, medical records, prescriptions, and billing — migrated from legacy desktop to web and deployed across 30+ clinics.</div>
       <div class="proj-stack">
         <span class="stack-tag">Django</span><span class="stack-tag">MongoDB</span><span class="stack-tag">MySQL</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span>
       </div>
     </div>
     <div class="proj-card reveal">
-      <div class="proj-num">05 / EDTECH</div>
-      <div class="proj-title">CourseHub — Education Platform</div>
-      <div class="proj-desc">End-to-end education and payment platform with course management, enrollments, online payments, and real-time analytics.</div>
+      <div class="proj-num">05 / STUDENT ERP</div>
+      <div class="proj-title">Academic Management System</div>
+      <div class="proj-desc">Enterprise Student Affairs ERP serving 30,000+ students with GPA/CGPA Result Engine, grade appeals, dynamic certificates, and financial integration.</div>
       <div class="proj-stack">
-        <span class="stack-tag">Django</span><span class="stack-tag">Vue.js</span><span class="stack-tag">MySQL</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span>
+        <span class="stack-tag">ASP.NET</span><span class="stack-tag">C#</span><span class="stack-tag">SQL Server</span><span class="stack-tag">Bootstrap</span>
       </div>
     </div>
     <div class="proj-card reveal">
-      <div class="proj-num">06 / ACADEMIC</div>
-      <div class="proj-title">Academic Management System</div>
-      <div class="proj-desc">Postgraduate and academic management covering student affairs, credit systems, and institutional workflows.</div>
+      <div class="proj-num">06 / EDTECH</div>
+      <div class="proj-title">CourseHub — Education Platform</div>
+      <div class="proj-desc">End-to-end education platform with course management, student enrollments, online payments, and real-time analytics dashboard.</div>
       <div class="proj-stack">
-        <span class="stack-tag">Django</span><span class="stack-tag">Python</span><span class="stack-tag">MySQL</span><span class="stack-tag">Bootstrap</span>
+        <span class="stack-tag">Django</span><span class="stack-tag">Vue.js</span><span class="stack-tag">MySQL</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span>
       </div>
     </div>
   </div>
@@ -765,49 +1154,115 @@
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-header reveal">
-    <span class="section-num">04</span>
+    <span class="section-num">05</span>
     <h2 class="section-title">Technical Skills</h2>
     <div class="section-line"></div>
   </div>
   <div class="skills-section reveal">
     <div>
-      <div class="skill-group-title">Backend & Core</div>
-      <div class="skill-list">
-        <span class="skill-pill highlight">Python</span>
-        <span class="skill-pill highlight">Django</span>
-        <span class="skill-pill highlight">Django REST Framework</span>
-        <span class="skill-pill">ASP.NET MVC</span>
-        <span class="skill-pill">ASP.NET Core</span>
-        <span class="skill-pill">FastAPI</span>
+      <div class="skill-group">
+        <div class="skill-group-title">Backend &amp; Frameworks</div>
+        <div class="skill-list">
+          <span class="skill-pill highlight">Python</span>
+          <span class="skill-pill highlight">Django</span>
+          <span class="skill-pill highlight">Django REST Framework</span>
+          <span class="skill-pill">Celery</span>
+          <span class="skill-pill">C#</span>
+          <span class="skill-pill">ASP.NET MVC</span>
+          <span class="skill-pill">FastAPI</span>
+        </div>
       </div>
-      <br>
-      <div class="skill-group-title">Data & Caching</div>
-      <div class="skill-list">
-        <span class="skill-pill highlight">MySQL</span>
-        <span class="skill-pill highlight">Redis</span>
-        <span class="skill-pill highlight">MongoDB</span>
-        <span class="skill-pill">PostgreSQL</span>
-        <span class="skill-pill">Celery</span>
+      <div class="skill-group">
+        <div class="skill-group-title">Databases &amp; Caching</div>
+        <div class="skill-list">
+          <span class="skill-pill highlight">MySQL</span>
+          <span class="skill-pill highlight">PostgreSQL</span>
+          <span class="skill-pill highlight">Redis</span>
+          <span class="skill-pill highlight">MongoDB</span>
+          <span class="skill-pill">MS SQL Server</span>
+          <span class="skill-pill">Query Optimization</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Cloud &amp; DevOps</div>
+        <div class="skill-list">
+          <span class="skill-pill">AWS EC2</span>
+          <span class="skill-pill">AWS S3</span>
+          <span class="skill-pill">AWS RDS</span>
+          <span class="skill-pill">Docker</span>
+          <span class="skill-pill">Nginx</span>
+          <span class="skill-pill">GitHub Actions</span>
+          <span class="skill-pill">CI/CD</span>
+          <span class="skill-pill">Linux</span>
+        </div>
       </div>
     </div>
     <div>
-      <div class="skill-group-title">Architecture & Systems</div>
-      <div class="skill-list">
-        <span class="skill-pill highlight">Microservices</span>
-        <span class="skill-pill highlight">Distributed Systems</span>
-        <span class="skill-pill">System Design</span>
-        <span class="skill-pill">SOLID Principles</span>
-        <span class="skill-pill">REST APIs</span>
+      <div class="skill-group">
+        <div class="skill-group-title">Architecture &amp; Systems</div>
+        <div class="skill-list">
+          <span class="skill-pill highlight">Microservices</span>
+          <span class="skill-pill highlight">Distributed Systems</span>
+          <span class="skill-pill highlight">Multi-Tenancy</span>
+          <span class="skill-pill">SaaS Architecture</span>
+          <span class="skill-pill">System Design (HLD/LLD)</span>
+          <span class="skill-pill">Event-Driven</span>
+          <span class="skill-pill">REST APIs</span>
+          <span class="skill-pill">SOLID Principles</span>
+        </div>
       </div>
-      <br>
-      <div class="skill-group-title">Frontend & DevOps</div>
-      <div class="skill-list">
-        <span class="skill-pill">Vue.js</span>
-        <span class="skill-pill">Bootstrap</span>
-        <span class="skill-pill">Docker</span>
-        <span class="skill-pill">CI/CD</span>
-        <span class="skill-pill">Git</span>
-        <span class="skill-pill">Linux</span>
+      <div class="skill-group">
+        <div class="skill-group-title">Frontend</div>
+        <div class="skill-list">
+          <span class="skill-pill">Vue.js</span>
+          <span class="skill-pill">Pinia</span>
+          <span class="skill-pill">HTML5</span>
+          <span class="skill-pill">CSS3</span>
+          <span class="skill-pill">Bootstrap</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Domain Expertise</div>
+        <div class="skill-list">
+          <span class="skill-pill highlight">Healthcare IT (LIS/HIS)</span>
+          <span class="skill-pill highlight">EdTech ERP</span>
+          <span class="skill-pill">Financial Systems</span>
+          <span class="skill-pill">Technical Leadership</span>
+          <span class="skill-pill">Client Delivery</span>
+          <span class="skill-pill">PMP</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" style="padding-top: 0;">
+  <div class="section-header reveal">
+    <span class="section-num">06</span>
+    <h2 class="section-title">Education &amp; Certifications</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="cert-grid reveal">
+    <div class="cert-card">
+      <div class="cert-icon">#</div>
+      <div>
+        <div class="cert-name">B.Eng. Communication Engineering</div>
+        <div class="cert-issuer">MANSOURA UNIVERSITY · 2007</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">#</div>
+      <div>
+        <div class="cert-name">Project Management Professional (PMP)</div>
+        <div class="cert-issuer">PMI</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">#</div>
+      <div>
+        <div class="cert-name">AWS Machine Learning Fundamentals</div>
+        <div class="cert-issuer">AMAZON WEB SERVICES</div>
       </div>
     </div>
   </div>
@@ -817,16 +1272,17 @@
 <section id="contact">
   <div class="contact-block reveal">
     <div class="contact-heading">Let's build<br><em style="font-family:'DM Serif Display',serif;font-style:italic;color:var(--green)">something great.</em></div>
-    <p class="contact-sub">Open to Senior / Principal Engineer, Backend Architect, and Technical Leadership roles — remote or Gulf-based.</p>
+    <p class="contact-sub">Open to Senior / Principal Backend Engineer, Backend Architect, and Technical Leadership roles — remote or Gulf-based. Let's talk.</p>
     <div class="contact-links">
+      <a href="mailto:ahmedbarakatsamra@gmail.com" class="contact-link primary">✉ ahmedbarakatsamra@gmail.com</a>
       <a href="https://www.linkedin.com/in/ahmed-barakat-samra" target="_blank" class="contact-link">↗ LinkedIn</a>
-      <a href="mailto:ahmedbarakatsamra@gmail.com" class="contact-link">✉ Email</a>
+      <a href="https://github.com/ahmedbarakat" target="_blank" class="contact-link">↗ GitHub</a>
     </div>
   </div>
 </section>
 
 <footer>
-  Built with care · Ahmed Barakat Samra · 2025
+  Ahmed Fathallah Barakat Samra · Principal Backend Engineer · 2025
 </footer>
 
 <script>
@@ -836,7 +1292,7 @@
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
 
   document.querySelectorAll('.reveal, .timeline-item').forEach(el => observer.observe(el));
 </script>

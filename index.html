@@ -46,7 +46,6 @@
     opacity: 0.4;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -94,7 +93,6 @@
   }
   .nav-cta:hover { background: var(--green); color: #fff; }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -257,7 +255,6 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* SECTIONS */
   section {
     padding: 6rem 2.5rem;
     max-width: 900px;
@@ -292,7 +289,6 @@
     margin-left: 1rem;
   }
 
-  /* ABOUT / SUMMARY */
   .about-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -343,7 +339,6 @@
     font-weight: 400;
   }
 
-  /* EXPERTISE */
   .expertise-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -384,7 +379,6 @@
     line-height: 1.6;
   }
 
-  /* EXPERIENCE TIMELINE */
   .timeline {
     position: relative;
     padding-left: 1.5rem;
@@ -468,7 +462,6 @@
     font-size: 12px;
   }
 
-  /* PROJECTS */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -534,7 +527,6 @@
     letter-spacing: 0.05em;
   }
 
-  /* ACHIEVEMENTS */
   .achievements-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -596,7 +588,6 @@
     line-height: 1.5;
   }
 
-  /* SKILLS */
   .skills-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -635,7 +626,6 @@
   .skill-pill:hover { border-color: var(--green); color: var(--green); }
   .skill-pill.highlight { border-color: rgba(29,158,117,0.3); color: var(--text); }
 
-  /* CERTIFICATIONS */
   .cert-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -676,7 +666,6 @@
     letter-spacing: 0.05em;
   }
 
-  /* CONTACT */
   .contact-block {
     background: var(--bg2);
     border: 0.5px solid var(--border);
@@ -737,7 +726,6 @@
   }
   .contact-link.primary:hover { background: var(--green-dim); }
 
-  /* FOOTER */
   footer {
     text-align: center;
     padding: 2rem;
@@ -748,66 +736,12 @@
     letter-spacing: 0.08em;
   }
 
-  /* SCROLL REVEAL */
   .reveal {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* DOWNLOAD BAR */
-  .download-bar {
-    background: var(--bg3);
-    border: 0.5px solid var(--border);
-    padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-  }
-
-  .download-bar-text {
-    font-size: 13px;
-    color: var(--text2);
-  }
-
-  .download-bar-text span {
-    color: var(--green);
-    font-weight: 500;
-  }
-
-  .download-btns {
-    display: flex;
-    gap: 0.75rem;
-  }
-
-  .dl-btn {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    padding: 7px 16px;
-    letter-spacing: 0.06em;
-    text-decoration: none;
-    transition: all 0.2s;
-    cursor: pointer;
-    border: none;
-    font-weight: 500;
-  }
-
-  .dl-btn-primary {
-    background: var(--green);
-    color: #fff;
-  }
-  .dl-btn-primary:hover { background: var(--green-dim); }
-
-  .dl-btn-outline {
-    background: transparent;
-    border: 0.5px solid var(--border2);
-    color: var(--text2);
-  }
-  .dl-btn-outline:hover { border-color: var(--green); color: var(--green); }
 
   @media (max-width: 700px) {
     nav { padding: 1rem 1.25rem; }
@@ -819,7 +753,6 @@
     .skills-section { grid-template-columns: 1fr; }
     .cert-grid { grid-template-columns: 1fr; }
     .contact-block { padding: 2rem 1.25rem; }
-    .download-bar { flex-direction: column; align-items: flex-start; }
   }
 </style>
 </head>
@@ -845,11 +778,11 @@
   <div class="hero-inner">
     <div class="hero-tag">Available for Remote &amp; Gulf Opportunities</div>
     <h1>Ahmed Barakat<br><em>Samra.</em></h1>
-    <div class="hero-title-line">CO-FOUNDER · PRINCIPAL BACKEND ENGINEER · SYSTEM ARCHITECT</div>
+    <div class="hero-title-line">CO-FOUNDER · SENIOR SOFTWARE ENGINEER · SYSTEM ARCHITECT</div>
     <p class="hero-sub">
       14+ years building enterprise-grade SaaS systems from the ground up — solo.
-      Co-founder of Inmaa &amp; Alnafis. Specialized in Django, distributed systems, and
-      high-performance platforms in HealthTech &amp; EdTech.
+      Co-founder of Inmaa &amp; Alnafis. Specialized in Django, multi-tenant architecture,
+      and high-performance platforms in HealthTech &amp; EdTech.
     </p>
     <div class="hero-ctas">
       <a href="#contact" class="btn btn-primary">Let's Talk →</a>
@@ -870,12 +803,12 @@
         <div class="hero-stat-label">Co-Founded Startups</div>
       </div>
       <div>
-        <div class="hero-stat-num">30+</div>
-        <div class="hero-stat-label">Client Deployments</div>
+        <div class="hero-stat-num">5K+</div>
+        <div class="hero-stat-label">Lab Transactions/Day</div>
       </div>
       <div>
-        <div class="hero-stat-num">&lt;1s</div>
-        <div class="hero-stat-label">Response Times</div>
+        <div class="hero-stat-num">0</div>
+        <div class="hero-stat-label">Unplanned Downtime</div>
       </div>
     </div>
   </div>
@@ -891,21 +824,21 @@
   <div class="about-block reveal">
     <div class="about-text">
       <p>
-        I'm a <span class="about-highlight">Co-Founder and Principal Backend Engineer</span> with 14+ years of
+        I'm a <span class="about-highlight">Co-Founder and Senior Software Engineer & System Architect</span> with 14+ years of
         experience designing and delivering mission-critical SaaS platforms across Healthcare and Education.
       </p>
       <p>
         As the <span class="about-highlight">sole developer and technical lead</span> at Inmaa and Alnafis for
-        over 10 years, I wore every hat — architect, engineer, client liaison, and delivery lead. From writing
-        the first line of code to shipping production systems serving hundreds of thousands of users.
+        over 8 years, I wore every hat — architect, engineer, client liaison, and delivery lead. From writing
+        the first line of code to shipping production systems serving 30,000+ users.
       </p>
       <p>
-        I specialize in <span class="about-highlight">Python/Django, distributed systems, multi-tenant
-        architecture,</span> and high-performance backend engineering — with deep domain expertise in
-        Laboratory Information Systems, Hospital IS, and Academic ERP.
+        I specialize in <span class="about-highlight">Python/Django, multi-tenant architecture,</span> and
+        high-performance backend engineering — with deep domain expertise in Laboratory Information Systems,
+        Hospital IS, Clinic ERP, Accounting, Inventory, CRM, HR &amp; Payroll, and Academic ERP.
       </p>
       <p style="margin-top: 1.5rem;">
-        Open to <span class="about-highlight">Senior/Principal Engineer, Backend Architect, and Technical
+        Open to <span class="about-highlight">Senior Engineer, Backend Architect, and Technical
         Leadership roles</span> — remote or Gulf-based.
       </p>
     </div>
@@ -924,7 +857,7 @@
       </div>
       <div class="about-fact">
         <div class="fact-label">Core Stack</div>
-        <div class="fact-value">Python · Django · Redis · AWS</div>
+        <div class="fact-value">Python · Django · Redis · MySQL · MongoDB</div>
       </div>
       <div class="about-fact">
         <div class="fact-label">Languages</div>
@@ -949,32 +882,32 @@
     <div class="expertise-card">
       <div class="exp-icon">[BE]</div>
       <div class="exp-card-title">Backend Architecture</div>
-      <div class="exp-card-desc">Designing scalable Django systems with clean architecture, SOLID principles, HLD/LLD, and long-term maintainability.</div>
-    </div>
-    <div class="expertise-card">
-      <div class="exp-icon">[DS]</div>
-      <div class="exp-card-title">Distributed Systems</div>
-      <div class="exp-card-desc">Microservices design, event-driven architecture, async workflows with Celery &amp; Redis achieving sub-second response times at scale.</div>
-    </div>
-    <div class="expertise-card">
-      <div class="exp-icon">[HIS]</div>
-      <div class="exp-card-title">Healthcare Platforms</div>
-      <div class="exp-card-desc">Deep expertise in Hospital IS (HIS), Laboratory IS (LIS), Clinic ERP, and Medical ePortfolio platforms in production.</div>
+      <div class="exp-card-desc">Designing scalable Django systems with clean architecture, SOLID principles, and long-term maintainability across complex enterprise domains.</div>
     </div>
     <div class="expertise-card">
       <div class="exp-icon">[MT]</div>
       <div class="exp-card-title">Multi-Tenant SaaS</div>
-      <div class="exp-card-desc">Multi-tenancy engine with per-client database partitioning, strict data isolation, and single-codebase scalability.</div>
+      <div class="exp-card-desc">Custom multi-tenancy engine with per-client data isolation, dynamic middleware, and single-codebase scalability across Mini and Mega lab models.</div>
     </div>
     <div class="expertise-card">
-      <div class="exp-icon">[TL]</div>
-      <div class="exp-card-title">Technical Leadership</div>
-      <div class="exp-card-desc">Co-founding, product roadmaps, client delivery, mentoring developers, and translating business needs into technical solutions.</div>
+      <div class="exp-icon">[HIS]</div>
+      <div class="exp-card-title">Healthcare Platforms</div>
+      <div class="exp-card-desc">Deep expertise in Hospital IS (HIS), Laboratory IS (LIS), Clinic &amp; Polyclinic ERP, Pathology Lab, and Medical ePortfolio — all in active production.</div>
+    </div>
+    <div class="expertise-card">
+      <div class="exp-icon">[RT]</div>
+      <div class="exp-card-title">Real-Time Systems</div>
+      <div class="exp-card-desc">Django Channels &amp; WebSockets for live notifications, staff chat, multi-branch sync across 13+ branches, and concurrent-session conflict detection.</div>
+    </div>
+    <div class="expertise-card">
+      <div class="exp-icon">[BIZ]</div>
+      <div class="exp-card-title">Business Modules</div>
+      <div class="exp-card-desc">Full Accounting cycle, Inventory with kit tracking, CRM &amp; Campaign engine, Customer Satisfaction system, and HR &amp; Payroll — built and delivered end-to-end.</div>
     </div>
     <div class="expertise-card">
       <div class="exp-icon">[OPS]</div>
-      <div class="exp-card-title">Cloud &amp; DevOps</div>
-      <div class="exp-card-desc">AWS (EC2, S3, RDS), Docker, Nginx, GitHub Actions CI/CD pipelines, and Linux-based infrastructure for enterprise reliability.</div>
+      <div class="exp-card-title">Infrastructure</div>
+      <div class="exp-card-desc">AWS (EC2, S3, RDS), Docker, Nginx, and Linux-based infrastructure. Zero unplanned downtime across all production systems.</div>
     </div>
   </div>
 </section>
@@ -990,46 +923,34 @@
 
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-period">January 2021 — Present · 4+ years</div>
-      <div class="timeline-role">Co-Founder &amp; Principal Backend Engineer / Technical Lead</div>
-      <div class="timeline-org">Inmaa Solutions · Mansoura, Egypt</div>
+      <div class="timeline-period">January 2014 — January 2026 · 12 years</div>
+      <div class="timeline-role">Co-Founder &amp; Principal Backend Engineer</div>
+      <div class="timeline-org">Alnafis · Mansoura, Egypt</div>
       <div class="timeline-badge">Co-Founder · Sole Developer · Architect</div>
       <ul class="timeline-points">
-        <li>Served as Co-Founder and sole developer, owning the full engineering lifecycle — architecture, development, client delivery, support, and product roadmap.</li>
-        <li>Architected and scaled a high-volume multi-tenant LIS &amp; ERP SaaS platform serving 20,000+ active users across mega-labs.</li>
-        <li>Engineered a dynamic Multi-Tenancy Engine using Django ORM and Middleware for per-client database partitioning (MySQL/MongoDB) with strict data isolation.</li>
-        <li>Designed a state-machine workflow automation system enforcing separation of duties (Reception → Sampling → Verification), reducing errors by ~60%.</li>
-        <li>Built a complex financial engine handling B2B contracts, insurance coverage, and dynamic discounting logic across multiple branches.</li>
-        <li>Implemented async processing with Celery + Redis, achieving sub-second response times for heavy financial calculations.</li>
-        <li>Developed a full-stack Hospital Information System (HIS) with real-time accounting and inventory management.</li>
-        <li>Led end-to-end development of a Medical ePortfolio &amp; Student Portal for Mansoura Faculty of Medicine (Vue.js + Django REST).</li>
+        <li>Co-founded Alnafis as sole developer and system architect; responsible for all development, delivery, and client follow-up — all systems remain in active production with zero unplanned downtime.</li>
+        <li>Architected a multi-tenant LIS on Python, Django, MySQL, MongoDB, Celery, Redis, and Django Channels with a custom Multi-Tenancy Engine for strict per-client data isolation from a single codebase.</li>
+        <li>Deployed real-time multi-branch sync across 13+ branches for a Mega Lab client processing 5,000+ lab transactions per day.</li>
+        <li>Designed state-machine lab workflow enforcing separation of duties (Reception → Sampling → Verification), reducing human errors to near-zero via enforced RBAC.</li>
+        <li>Built a comprehensive financial engine covering B2B contracts, insurance claims, price lists, multi-branch discounting, and installment plans.</li>
+        <li>Delivered Clinic &amp; Polyclinic Management, Pathology Lab, HIS, Medical Internship System (1,500–2,000 interns), and Medical ePortfolio.</li>
+        <li>Built full Accounting, Inventory, CRM &amp; Campaign, Customer Satisfaction, HR &amp; Payroll, and real-time Dashboard modules.</li>
+        <li>Implemented real-time features via Django Channels: staff chat, live notifications, and concurrent-session conflict detection.</li>
       </ul>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-period">October 2016 — December 2020 · 4+ years</div>
-      <div class="timeline-role">Co-Founder &amp; Senior Full-Stack Engineer / System Architect</div>
-      <div class="timeline-org">Alnafis · Independent Consultant · Mansoura, Egypt</div>
-      <div class="timeline-badge">Co-Founder · Sole Developer · Client Lead</div>
+      <div class="timeline-period">January 2011 — January 2026 · 15 years</div>
+      <div class="timeline-role">Co-Founder &amp; Lead Software Architect</div>
+      <div class="timeline-org">Inmaa Solutions · Mansoura, Egypt</div>
+      <div class="timeline-badge">Co-Founder · Sole Developer (8+ years) · Technical Lead</div>
       <ul class="timeline-points">
-        <li>Co-founded Alnafis; sole developer, architect, client liaison, and delivery lead for the full duration.</li>
-        <li>Built and deployed a Clinic Management ERP (Reception, Patient History, Exams, Accounting) across 30+ client clinics.</li>
-        <li>Migrated legacy desktop systems to modern Python/Django web architectures with JWT auth and REST endpoints.</li>
-        <li>Acted as primary technical contact for all clients — support, feature development, and database administration.</li>
-      </ul>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-period">January 2012 — September 2016 · 4+ years</div>
-      <div class="timeline-role">Lead Software Architect (.NET) — Contract</div>
-      <div class="timeline-org">Higher Education Projects · Cairo &amp; Mansoura, Egypt</div>
-      <ul class="timeline-points">
-        <li>Evolved from core developer to sole System Architect on an enterprise Student Affairs ERP serving 30,000+ students at Cairo University, Ain Shams University, and private institutes.</li>
-        <li>Built a proprietary Result Engine for GPA/CGPA calculation, grade appeals, control sheets, and dynamic certificate generation.</li>
-        <li>Developed specialized modules for complex academic workflows including research-based grading for Nanotechnology postgraduates.</li>
-        <li>Implemented financial integration logic blocking student registration pending fee payment verification.</li>
+        <li>Co-founded Inmaa Solutions; architected a Student Affairs ERP on C#, ASP.NET MVC, and SQL Server. Transitioned to sole engineer and technical lead for the past 8+ years.</li>
+        <li>Delivered systems for Tanta University Faculty of Pharmacy and six Ain Shams University faculties — serving 30,000+ students and staff.</li>
+        <li>Designed postgraduate management systems for Ain Shams Dentistry and Cairo University Nanotechnology Program: admission, registration, research supervision, GPA/CGPA, and dynamic certificate generation.</li>
+        <li>Built a proprietary Result Engine for automated grade calculation of ~1,500 students per run, grade appeals, control sheets, and conditional financial holds.</li>
+        <li>Delivered a Medical Internship System and Medical ePortfolio for Mansoura University Faculty of Medicine covering all specialties, monitored by ~50 supervisors and 2 program directors.</li>
       </ul>
     </div>
 
@@ -1039,8 +960,8 @@
       <div class="timeline-role">Software Developer</div>
       <div class="timeline-org">Cairo IT · Cairo, Egypt</div>
       <ul class="timeline-points">
-        <li>Built and maintained ASP.NET applications; developed custom C# tools for XML validation.</li>
-        <li>Enhanced enterprise document workflows on SharePoint portals.</li>
+        <li>Developed custom C# tools for XML validation and optimised internal communication platforms.</li>
+        <li>Enhanced enterprise document management workflows on SharePoint portals.</li>
       </ul>
     </div>
 
@@ -1057,29 +978,29 @@
   <div class="achievements-grid reveal">
     <div class="achievement-card">
       <div class="achievement-num">30K+</div>
-      <div class="achievement-label">Total users across HealthTech &amp; EdTech platforms</div>
+      <div class="achievement-label">Users across HealthTech &amp; EdTech platforms</div>
     </div>
     <div class="achievement-card">
-      <div class="achievement-num">30+</div>
-      <div class="achievement-label">Client clinic deployments as sole engineer</div>
+      <div class="achievement-num">5K+</div>
+      <div class="achievement-label">Lab transactions processed daily across 13+ branches</div>
     </div>
     <div class="achievement-card">
-      <div class="achievement-num">~60%</div>
-      <div class="achievement-label">Reduction in lab operational errors via workflow automation</div>
+      <div class="achievement-num">Zero</div>
+      <div class="achievement-label">Unplanned downtime across all production systems</div>
     </div>
     <div class="achievement-card">
-      <div class="achievement-num">&lt;1s</div>
-      <div class="achievement-label">Response times on heavy financial calculations</div>
+      <div class="achievement-num">10+</div>
+      <div class="achievement-label">Integrated modules delivered as sole engineer</div>
     </div>
   </div>
   <div class="achievement-items reveal">
     <div class="achievement-item">
       <div class="achievement-arrow">→</div>
-      <div class="achievement-text">Scaled SaaS platforms to 30,000+ total users as a solo technical co-founder across two startups over 10+ years.</div>
+      <div class="achievement-text">Reduced human errors to near-zero through enforced state-machine workflows and role-based access control across lab operations.</div>
     </div>
     <div class="achievement-item">
       <div class="achievement-arrow">→</div>
-      <div class="achievement-text">Delivered end-to-end enterprise systems for Cairo University, Ain Shams University, Mansoura Faculty of Medicine, and 30+ clinics as the sole engineer and architect.</div>
+      <div class="achievement-text">Delivered end-to-end enterprise systems for Cairo University, Ain Shams University, Mansoura Faculty of Medicine, and multiple healthcare providers — as sole engineer and architect.</div>
     </div>
     <div class="achievement-item">
       <div class="achievement-arrow">→</div>
@@ -1087,7 +1008,7 @@
     </div>
     <div class="achievement-item">
       <div class="achievement-arrow">→</div>
-      <div class="achievement-text">Built and shipped a complex B2B financial engine covering insurance coverage, branch-level discounting, and contract management in production.</div>
+      <div class="achievement-text">Built and shipped a complex B2B financial engine covering insurance coverage, branch-level discounting, and contract management — in active production.</div>
     </div>
   </div>
 </section>
@@ -1103,49 +1024,49 @@
     <div class="proj-card reveal">
       <div class="proj-num">01 / LIS</div>
       <div class="proj-title">Laboratory Information System</div>
-      <div class="proj-desc">Multi-tenant LIS &amp; ERP SaaS for mega-labs with state-machine workflows, B2B financial engine, and real-time branch reporting. 20,000+ active users.</div>
+      <div class="proj-desc">Multi-tenant LIS with state-machine workflows, real-time 13-branch sync, 5,000+ daily transactions, B2B financial engine, and strict per-client data isolation.</div>
       <div class="proj-stack">
-        <span class="stack-tag">Django</span><span class="stack-tag">Python</span><span class="stack-tag">MySQL</span><span class="stack-tag">MongoDB</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span>
+        <span class="stack-tag">Django</span><span class="stack-tag">Python</span><span class="stack-tag">MySQL</span><span class="stack-tag">MongoDB</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span><span class="stack-tag">Django Channels</span>
       </div>
     </div>
     <div class="proj-card reveal">
       <div class="proj-num">02 / HIS</div>
       <div class="proj-title">Hospital Information System</div>
-      <div class="proj-desc">Full-stack HIS with real-time patient invoicing, inventory management, clinical workflows, medical records, and billing at enterprise scale.</div>
+      <div class="proj-desc">Full-stack HIS with real-time patient invoicing, inpatient/outpatient management, inventory, accounting, and clinical workflows at enterprise scale.</div>
       <div class="proj-stack">
         <span class="stack-tag">Django</span><span class="stack-tag">Python</span><span class="stack-tag">MySQL</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span>
       </div>
     </div>
     <div class="proj-card reveal">
-      <div class="proj-num">03 / EPORTFOLIO</div>
-      <div class="proj-title">Medical Student ePortfolio</div>
-      <div class="proj-desc">Platform for Mansoura Faculty of Medicine students — clinical experience logs, supervisor assessments, and competency tracking via decoupled frontend/API.</div>
-      <div class="proj-stack">
-        <span class="stack-tag">Django REST</span><span class="stack-tag">Vue.js</span><span class="stack-tag">MySQL</span><span class="stack-tag">Redis</span>
-      </div>
-    </div>
-    <div class="proj-card reveal">
-      <div class="proj-num">04 / CLINIC ERP</div>
-      <div class="proj-title">Clinic Management ERP</div>
-      <div class="proj-desc">Patient registration, appointments, medical records, prescriptions, and billing — migrated from legacy desktop to web and deployed across 30+ clinics.</div>
+      <div class="proj-num">03 / CLINIC</div>
+      <div class="proj-title">Clinic &amp; Polyclinic ERP</div>
+      <div class="proj-desc">Dynamic MongoDB exam sheets per specialty, audio notes, prescriptions, patient records, appointment scheduling, and billing across multi-branch medical centres.</div>
       <div class="proj-stack">
         <span class="stack-tag">Django</span><span class="stack-tag">MongoDB</span><span class="stack-tag">MySQL</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span>
       </div>
     </div>
     <div class="proj-card reveal">
+      <div class="proj-num">04 / EPORTFOLIO</div>
+      <div class="proj-title">Medical Student ePortfolio</div>
+      <div class="proj-desc">Clinical case tracking across all specialties for Mansoura Faculty of Medicine — monitored by ~50 supervisors and 2 program directors simultaneously.</div>
+      <div class="proj-stack">
+        <span class="stack-tag">Django REST</span><span class="stack-tag">Vue.js</span><span class="stack-tag">MySQL</span><span class="stack-tag">MongoDB</span><span class="stack-tag">Redis</span>
+      </div>
+    </div>
+    <div class="proj-card reveal">
       <div class="proj-num">05 / STUDENT ERP</div>
       <div class="proj-title">Academic Management System</div>
-      <div class="proj-desc">Enterprise Student Affairs ERP serving 30,000+ students with GPA/CGPA Result Engine, grade appeals, dynamic certificates, and financial integration.</div>
+      <div class="proj-desc">Student Affairs ERP serving 30,000+ students with Result Engine (~1,500 students/run), GPA/CGPA, grade appeals, dynamic certificates, and financial integration.</div>
       <div class="proj-stack">
-        <span class="stack-tag">ASP.NET</span><span class="stack-tag">C#</span><span class="stack-tag">SQL Server</span><span class="stack-tag">Bootstrap</span>
+        <span class="stack-tag">ASP.NET MVC</span><span class="stack-tag">C#</span><span class="stack-tag">SQL Server</span><span class="stack-tag">Entity Framework</span>
       </div>
     </div>
     <div class="proj-card reveal">
       <div class="proj-num">06 / EDTECH</div>
       <div class="proj-title">CourseHub — Education Platform</div>
-      <div class="proj-desc">End-to-end education platform with course management, student enrollments, online payments, and real-time analytics dashboard.</div>
+      <div class="proj-desc">Client e-learning platform with course management, RBAC, JWT auth, real-time notifications, global middleware architecture, and Docker deployment.</div>
       <div class="proj-stack">
-        <span class="stack-tag">Django</span><span class="stack-tag">Vue.js</span><span class="stack-tag">MySQL</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span>
+        <span class="stack-tag">Django</span><span class="stack-tag">DRF</span><span class="stack-tag">Vue.js</span><span class="stack-tag">MySQL</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span><span class="stack-tag">Docker</span>
       </div>
     </div>
   </div>
@@ -1169,7 +1090,7 @@
           <span class="skill-pill">Celery</span>
           <span class="skill-pill">C#</span>
           <span class="skill-pill">ASP.NET MVC</span>
-          <span class="skill-pill">FastAPI</span>
+          <span class="skill-pill">Entity Framework</span>
         </div>
       </div>
       <div class="skill-group">
@@ -1184,16 +1105,24 @@
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Cloud &amp; DevOps</div>
+        <div class="skill-group-title">Real-Time &amp; Async</div>
+        <div class="skill-list">
+          <span class="skill-pill highlight">Django Channels</span>
+          <span class="skill-pill highlight">WebSockets</span>
+          <span class="skill-pill">Async Task Processing</span>
+          <span class="skill-pill">Multi-Branch Sync</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Infrastructure</div>
         <div class="skill-list">
           <span class="skill-pill">AWS EC2</span>
           <span class="skill-pill">AWS S3</span>
           <span class="skill-pill">AWS RDS</span>
           <span class="skill-pill">Docker</span>
           <span class="skill-pill">Nginx</span>
-          <span class="skill-pill">GitHub Actions</span>
-          <span class="skill-pill">CI/CD</span>
           <span class="skill-pill">Linux</span>
+          <span class="skill-pill">Git / SVN</span>
         </div>
       </div>
     </div>
@@ -1201,13 +1130,12 @@
       <div class="skill-group">
         <div class="skill-group-title">Architecture &amp; Systems</div>
         <div class="skill-list">
-          <span class="skill-pill highlight">Microservices</span>
-          <span class="skill-pill highlight">Distributed Systems</span>
           <span class="skill-pill highlight">Multi-Tenancy</span>
-          <span class="skill-pill">SaaS Architecture</span>
+          <span class="skill-pill highlight">SaaS Architecture</span>
+          <span class="skill-pill highlight">State Machine Design</span>
           <span class="skill-pill">System Design (HLD/LLD)</span>
-          <span class="skill-pill">Event-Driven</span>
           <span class="skill-pill">REST APIs</span>
+          <span class="skill-pill">RBAC</span>
           <span class="skill-pill">SOLID Principles</span>
         </div>
       </div>
@@ -1224,23 +1152,24 @@
       <div class="skill-group">
         <div class="skill-group-title">Domain Expertise</div>
         <div class="skill-list">
-          <span class="skill-pill highlight">Healthcare IT (LIS/HIS)</span>
+          <span class="skill-pill highlight">LIS / HIS</span>
+          <span class="skill-pill highlight">Clinic &amp; Polyclinic ERP</span>
           <span class="skill-pill highlight">EdTech ERP</span>
+          <span class="skill-pill">Accounting &amp; Inventory</span>
+          <span class="skill-pill">CRM &amp; Campaigns</span>
+          <span class="skill-pill">HR &amp; Payroll</span>
           <span class="skill-pill">Financial Systems</span>
-          <span class="skill-pill">Technical Leadership</span>
-          <span class="skill-pill">Client Delivery</span>
-          <span class="skill-pill">PMP</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
+<!-- EDUCATION & COURSES -->
 <section id="certifications" style="padding-top: 0;">
   <div class="section-header reveal">
     <span class="section-num">06</span>
-    <h2 class="section-title">Education &amp; Certifications</h2>
+    <h2 class="section-title">Education &amp; Courses</h2>
     <div class="section-line"></div>
   </div>
   <div class="cert-grid reveal">
@@ -1255,14 +1184,14 @@
       <div class="cert-icon">#</div>
       <div>
         <div class="cert-name">Project Management Professional (PMP)</div>
-        <div class="cert-issuer">PMI</div>
+        <div class="cert-issuer">PMI · COURSE COMPLETED</div>
       </div>
     </div>
     <div class="cert-card">
       <div class="cert-icon">#</div>
       <div>
         <div class="cert-name">AWS Machine Learning Fundamentals</div>
-        <div class="cert-issuer">AMAZON WEB SERVICES</div>
+        <div class="cert-issuer">AMAZON WEB SERVICES · COURSE COMPLETED</div>
       </div>
     </div>
   </div>
@@ -1272,7 +1201,7 @@
 <section id="contact">
   <div class="contact-block reveal">
     <div class="contact-heading">Let's build<br><em style="font-family:'DM Serif Display',serif;font-style:italic;color:var(--green)">something great.</em></div>
-    <p class="contact-sub">Open to Senior /  System Architect, Backend Architect, and Technical Leadership roles — remote or Gulf-based. Let's talk.</p>
+    <p class="contact-sub">Open to Senior Engineer, System Architect, and Technical Leadership roles — remote or Gulf-based. Let's talk.</p>
     <div class="contact-links">
       <a href="mailto:ahmedbarakatsamra@gmail.com" class="contact-link primary">✉ ahmedbarakatsamra@gmail.com</a>
       <a href="https://www.linkedin.com/in/ahmed-barakat-samra" target="_blank" class="contact-link">↗ LinkedIn</a>
@@ -1282,7 +1211,7 @@
 </section>
 
 <footer>
-  Ahmed Fathallah Barakat Samra · Senior Software Engineer & System Architect · 2025
+  Ahmed Fathallah Barakat Samra · Senior Software Engineer & System Architect · 2026
 </footer>
 
 <script>

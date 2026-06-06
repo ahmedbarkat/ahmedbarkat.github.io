@@ -824,7 +824,7 @@
   <div class="about-block reveal">
     <div class="about-text">
       <p>
-        I'm a <span class="about-highlight">Co-Founder and Senior Software Engineer & System Architect</span> with 14+ years of
+        I'm a <span class="about-highlight">Co-Founder and Senior Software Engineer &amp; System Architect</span> with 14+ years of
         experience designing and delivering mission-critical SaaS platforms across Healthcare and Education.
       </p>
       <p>
@@ -932,6 +932,7 @@
         <li>Architected a multi-tenant LIS on Python, Django, MySQL, MongoDB, Celery, Redis, and Django Channels with a custom Multi-Tenancy Engine for strict per-client data isolation from a single codebase.</li>
         <li>Deployed real-time multi-branch sync across 13+ branches for a Mega Lab client processing 5,000+ lab transactions per day.</li>
         <li>Designed state-machine lab workflow enforcing separation of duties (Reception → Sampling → Verification), reducing human errors to near-zero via enforced RBAC.</li>
+        <li>Implemented Celery and Redis async task processing for the Medical ePortfolio system (Mansoura Faculty of Medicine), offloading heavy form and template generation tasks from the request cycle — improving responsiveness and reducing server resource consumption under concurrent load.</li>
         <li>Built a comprehensive financial engine covering B2B contracts, insurance claims, price lists, multi-branch discounting, and installment plans.</li>
         <li>Delivered Clinic &amp; Polyclinic Management, Pathology Lab, HIS, Medical Internship System (1,500–2,000 interns), and Medical ePortfolio.</li>
         <li>Built full Accounting, Inventory, CRM &amp; Campaign, Customer Satisfaction, HR &amp; Payroll, and real-time Dashboard modules.</li>
@@ -950,6 +951,7 @@
         <li>Delivered systems for Tanta University Faculty of Pharmacy and six Ain Shams University faculties — serving 30,000+ students and staff.</li>
         <li>Designed postgraduate management systems for Ain Shams Dentistry and Cairo University Nanotechnology Program: admission, registration, research supervision, GPA/CGPA, and dynamic certificate generation.</li>
         <li>Built a proprietary Result Engine for automated grade calculation of ~1,500 students per run, grade appeals, control sheets, and conditional financial holds.</li>
+        <li>Optimised the Result Engine for Ain Shams University Student Affairs using C# async/threading, reducing grade calculation time by ~50% for ~1,500 students per run while significantly lowering server resource consumption.</li>
         <li>Delivered a Medical Internship System and Medical ePortfolio for Mansoura University Faculty of Medicine covering all specialties, monitored by ~50 supervisors and 2 program directors.</li>
       </ul>
     </div>
@@ -989,8 +991,8 @@
       <div class="achievement-label">Unplanned downtime across all production systems</div>
     </div>
     <div class="achievement-card">
-      <div class="achievement-num">10+</div>
-      <div class="achievement-label">Integrated modules delivered as sole engineer</div>
+      <div class="achievement-num">~50%</div>
+      <div class="achievement-label">Grade calculation time reduction via C# async/threading</div>
     </div>
   </div>
   <div class="achievement-items reveal">
@@ -1000,7 +1002,11 @@
     </div>
     <div class="achievement-item">
       <div class="achievement-arrow">→</div>
-      <div class="achievement-text">Delivered end-to-end enterprise systems for Cairo University, Ain Shams University, Mansoura Faculty of Medicine, and multiple healthcare providers — as sole engineer and architect.</div>
+      <div class="achievement-text">Optimised the Ain Shams University Student Affairs Result Engine using C# async/threading — cutting grade calculation time by ~50% for ~1,500 students per run while lowering server resource consumption.</div>
+    </div>
+    <div class="achievement-item">
+      <div class="achievement-arrow">→</div>
+      <div class="achievement-text">Implemented Celery and Redis async task processing for the Mansoura Faculty of Medicine ePortfolio — offloading form and template generation from the request cycle, improving responsiveness under concurrent load.</div>
     </div>
     <div class="achievement-item">
       <div class="achievement-arrow">→</div>
@@ -1048,17 +1054,17 @@
     <div class="proj-card reveal">
       <div class="proj-num">04 / EPORTFOLIO</div>
       <div class="proj-title">Medical Student ePortfolio</div>
-      <div class="proj-desc">Clinical case tracking across all specialties for Mansoura Faculty of Medicine — monitored by ~50 supervisors and 2 program directors simultaneously.</div>
+      <div class="proj-desc">Clinical case tracking across all specialties for Mansoura Faculty of Medicine — monitored by ~50 supervisors and 2 program directors simultaneously. Celery/Redis async processing for form and template generation.</div>
       <div class="proj-stack">
-        <span class="stack-tag">Django REST</span><span class="stack-tag">Vue.js</span><span class="stack-tag">MySQL</span><span class="stack-tag">MongoDB</span><span class="stack-tag">Redis</span>
+        <span class="stack-tag">Django REST</span><span class="stack-tag">Vue.js</span><span class="stack-tag">MySQL</span><span class="stack-tag">MongoDB</span><span class="stack-tag">Redis</span><span class="stack-tag">Celery</span>
       </div>
     </div>
     <div class="proj-card reveal">
       <div class="proj-num">05 / STUDENT ERP</div>
       <div class="proj-title">Academic Management System</div>
-      <div class="proj-desc">Student Affairs ERP serving 30,000+ students with Result Engine (~1,500 students/run), GPA/CGPA, grade appeals, dynamic certificates, and financial integration.</div>
+      <div class="proj-desc">Student Affairs ERP serving 30,000+ students with Result Engine (~1,500 students/run), C# async/threading optimization (~50% faster), GPA/CGPA, grade appeals, dynamic certificates, and financial integration.</div>
       <div class="proj-stack">
-        <span class="stack-tag">ASP.NET MVC</span><span class="stack-tag">C#</span><span class="stack-tag">SQL Server</span><span class="stack-tag">Entity Framework</span>
+        <span class="stack-tag">ASP.NET MVC</span><span class="stack-tag">C#</span><span class="stack-tag">SQL Server</span><span class="stack-tag">Entity Framework</span><span class="stack-tag">Async/Threading</span>
       </div>
     </div>
     <div class="proj-card reveal">
@@ -1211,7 +1217,7 @@
 </section>
 
 <footer>
-  Ahmed Fathallah Barakat Samra · Senior Software Engineer & System Architect · 2026
+  Ahmed Fathallah Barakat Samra · Senior Software Engineer &amp; System Architect · 2026
 </footer>
 
 <script>
